@@ -2,11 +2,11 @@ import logo from '/vite.svg'
 import { useState, useEffect } from 'react';
 import {styled} from 'styled-components'
 
-const HeaderContainer = styled.header`
+const HeaderContainer = styled.div`
 background-color: #3d237e;
 `
 
-export default function Header () {
+export default function TheHeader () {
     const [now, setNowState] = useState(new Date())
 
     useEffect(()=> {
