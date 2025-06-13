@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react';
 import {styled} from 'styled-components'
 
 const HeaderContainer = styled.div`
-background-color: #3d237e;
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 16px;
 `
 
 export default function TheHeader () {
