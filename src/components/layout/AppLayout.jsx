@@ -10,6 +10,7 @@ import EffectSection from "../EffectSection.jsx";
 import AppFooter from "./AppFooter.jsx";
 import { useContext, useState } from "react";
 import CryptoContext from "../../context/crypto-context.jsx";
+import { Link } from 'react-router-dom';
 
 export default function AppLayout() {
     const {loading} = useContext(CryptoContext)
@@ -18,13 +19,14 @@ export default function AppLayout() {
         return <Spin fullscreen />
     }
 
-
     const [tab, setTab] = useState('effect')
-
 
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <AppHeader />
+            <div style={{ padding: '10px', background: '#eee' }}>
+                <Link to="/">home</Link> <Link to="/test">test page</Link>
+            </div>
             <Layout>
                 <AppSider />
                 <AppContent>
